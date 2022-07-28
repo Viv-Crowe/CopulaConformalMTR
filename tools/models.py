@@ -1,3 +1,5 @@
+import tensorflow as tf
+print('Devices: ', tf.config.list_physical_devices())
 from tensorflow.keras.layers import (
     Input,
     Dense,
@@ -38,7 +40,7 @@ def simple_mlp(
 
     model = Model(inputs=[in_layer], outputs=[out])
 
-    model.compile(loss=mae, optimizer=Adam(learning_rate=learning_rate), kernel_regularizer=l1(l=0.0001))
+    model.compile(loss=mae, optimizer=Adam(learning_rate=learning_rate))
 
     model.summary()
 

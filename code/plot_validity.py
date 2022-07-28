@@ -109,8 +109,8 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--base_path", default="../input/music_origin")
-    parser.add_argument("--name", default="music_origin")
+    parser.add_argument("--base_path", default="./input/enb")
+    parser.add_argument("--name", default="enb")
     parser.add_argument("--cal_size", default=0.1, type=float)
     args = parser.parse_args()
 

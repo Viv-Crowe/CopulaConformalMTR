@@ -1,5 +1,6 @@
 import json
 import sys
+import os
 from pathlib import Path
 from sklearn.ensemble import RandomForestRegressor
 import pandas as pd
@@ -34,10 +35,10 @@ from tools.nonconformity_predictor import (
 if __name__ == "__main__":
 
     import argparse
-
+    print(os.getcwd())
     parser = argparse.ArgumentParser()
-    parser.add_argument("--base_path", default="../input/music_origin/")
-    parser.add_argument("--data_path", default="music_origin.csv")
+    parser.add_argument("--base_path", default="./input/enb")
+    parser.add_argument("--data_path", default="enb.csv")
     parser.add_argument("--cal_size", default=0.1, type=float)
     parser.add_argument("--nb_epoch", default=400, type=int)
     parser.add_argument("--layer_size", default=1024, type=int)
